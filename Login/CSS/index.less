@@ -1,0 +1,117 @@
+// 登录页面
+.index-panel{
+    padding-top: 6%;
+    width: 100%;
+    margin: 0  auto;
+    padding-bottom: 10px;
+
+    .login-frame{
+        width: 380px;
+        height: 440px;
+        background: #fff;
+        padding: 20px 30px 15px;    
+        margin: 0 auto;
+        // 标题部分
+        .login-title{
+            text-align: center;
+            height: 70px;
+            font-size: 24px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        .form-group{
+            width: 320px;
+            height: 40px;
+            margin-bottom: 22px;
+            position: relative;
+            >input{
+                height: 40px;
+                padding: 8px 0;
+                padding-left: 36px;
+                width: 100%;
+                
+            }
+            .inp-front{
+                position: absolute;
+                top: 10px;
+                left: 10px;
+            }
+            .clear-content{
+                position: absolute;
+                top: 9px;
+                right: 5px;
+                .tooltip-inner {
+                    max-width: 200px;
+                    padding: 3px 8px;
+                    color: #fff;
+                    text-align: center;
+                    background-color: #000;
+                    border-radius: 4px;
+                }
+            }
+            
+            //清除内容提示
+            .bottom-tip{
+                color: #ee4b47;
+                position: absolute;
+                top: auto;
+                font-size: 12px;   
+                line-height: 18px;
+                .bottom-txt-right{
+                    padding-left: 4px;
+                }
+            }
+
+        }
+        .login-btn{
+            width: 320px;
+            height: 40px;
+            margin-bottom: 16px;
+            font-size: 14px;
+            color: #fff;
+            >button{
+                height: 40px;
+            }
+        }
+        
+        .login-tip{
+            display: flex;
+            justify-content: space-between;   
+             height: 34px;
+            align-items: center;
+            margin-bottom: 16px;
+            .tip-left{
+                font-weight: normal;
+                vertical-align:middle;
+                cursor: pointer;
+            }
+            .tip-left>input{
+                margin-right: 5px;vertical-align: text-bottom;
+            }
+            .tip-right{
+                color: #279bf1;
+                
+            }
+            .tip-right>a{
+                text-decoration: none;
+            }
+            .login-line{
+                margin:0 7px;
+                height: 12px;
+                width: 1px;
+                background: #ccc;
+                overflow: hidden;
+                display: inline-block;
+            }
+        }
+        // 验证错误提示
+        .alert-danger{
+            background: #ffd0d0;
+            color: #ce4040;
+            padding: 7px 17px;
+            line-height: 20px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+@keyframes myAnimation {
+  0% {
+    background: #8ebbb4;
+    left: 0;
+    top: 0;
+  }
+  25% {
+    background: #ea969f;
+    left: 200px;
+    top: 0;
+  }
+  50% {
+    background: #ee9351;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background: #adb159;
+    left: 0;
+    top: 200px;
+  }
+  100% {
+    background: #8ebbb4;
+    left: 0;
+    top: 0;
+  }
+}
+.box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #eee;
+  background: #8ebbb4;
+  position: relative;
+  animation-name: myAnimation;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+}
+.transition1 {
+  width: 100px;
+  height: 100px;
+  transition: width 2s;
+  background: #7dbdf8;
+}
+.transition1:hover {
+  width: 300px;
+}
+.transform1 {
+  width: 150px;
+  height: 100px;
+  background: #f79a8e;
+  margin-top: 200px;
+  transform: translate(200px, -100px);
+  transform: rotate(50deg);
+  transform: scale(2, 2);
+  transform: skew(30deg, 20deg);
+}

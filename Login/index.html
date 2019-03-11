@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Common/CSS/base.css">
+    <link rel="stylesheet" href="../Component/bootstrap/css/bootstrap.css">
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="../Common/font/iconfont.min.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+</head>
+
+<body ng-app="App" ng-controller="LoginController">
+    <div class="index-panel">
+        <div class="login-frame">
+            <div class="login-title">
+                Happy birthday!
+            </div>
+            <form role="form" name="loginform" id="loginform">
+                <div class="form-group">
+                    <span class="lhf-iconfont icon-yonghu inp-front"></span>
+                    <input type="text" ng-model="userName" placeholder="请输入您注册的手机号码" ng-keydown="loginManager.inputMsg('username',userName)" ng-keyup="loginManager.clearData('username',userName)">
+                    <div ng-if="loginManager.userClearMsg">
+                        <i class="clear-content">x</i>
+                        <p class="bottom-tip">
+                            <i>!</i>
+                            <span class="bottom-txt-right" ng-bind="loginManager.userClearMsg"></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <span class="lhf-iconfont icon-password inp-front"></span>
+                    <input type="text" ng-model="userPassWord" ng-keydown="loginManager.inputMsg('password',userPassWord)" placeholder="请输入密码" ng-keydown="loginManager.clearData('password',userPassWord)">
+                    <div ng-if="loginManager.passwordClearMMsg">
+                            <i class="clear-content">x</i>
+                        <p class="bottom-tip">
+                            <i>!</i>
+                            <span class="bottom-txt-right" ng-bind="loginManager.passwordClearMMsg"></span>
+                        </p>
+                       </div>
+                </div>
+                <div class="login-btn">
+                    <button type="button" ng-click="loginManager.signIn(userName,userPassWord)" class="form-btn btn btn-block btn-primary">
+                        <span>登&nbsp;&nbsp;录</span>
+                    </button>
+                </div>
+                <div class="login-tip">
+                    <label for="remUserName" class="tip-left">
+                        <input type="checkbox" id="remUserName">记住用户名
+                    </label>
+                    <div class="tip-right">
+                        <a>忘记密码</a>
+                        <span class="login-line"></span>
+                        <a>快速注册</a>
+                    </div>
+                </div>
+                <!-- 验证错误提示 -->
+                <div class="alert-danger" ng-if="loginManager.errorMsg">
+                    <strong>错误！</strong>&nbsp;&nbsp;
+                    <span ng-bind="loginManager.errorMsg"></span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../Component/angular/angular.js"></script>
+    <script src="../Component/angular/angular-route.js"></script>
+    <script src="../Component/angular/angular-cookies.js"></script>
+    <script src="../Component/angularui/angular-ui-router.js"></script>
+    <script src="../Component/angularui/angular-ui-tree.js"></script>
+    <script src="../Component/jquery/jquery-3.3.1.js"></script>
+    <script src="../Component/jqueryui/js/jquery-ui-1.10.4.custom.js"></script>
+    <script src="../Component/bootstrap/js/bootstrap.js"></script>
+    <script src="./JS/index.js"></script>
+</body>
+
+</html>

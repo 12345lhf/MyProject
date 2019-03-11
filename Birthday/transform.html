@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
+    .parent{
+        border: 1px solid #000;
+        position: relative;
+        margin-top: 100px;
+        transform-style:preserve-3d;
+        /* //perspective 规定 3D 元素的透视效果。 */
+        perspective:500px;
+        /*也可 transform:perspective(500px) rotatey(0deg); */
+    }
+    .child{
+        position: absolute;
+        background: rgb(253, 56, 56);
+        transform: rotatey(45deg);
+        text-align: center;
+        font-size: 22px;
+        line-height: 200px;
+        top: 0;
+        left: 0;
+    }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">1</div>
+    </div>
+</body>
+</html>

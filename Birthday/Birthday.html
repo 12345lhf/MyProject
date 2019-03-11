@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Common/CSS/base.css">
+    <script src="../Component/jquery/jquery-3.3.1.js"></script>
+    <script src="../Component/node_modules/jquery-lazyload/jquery.lazyload.js"></script>
+</head>
+
+<body>
+    <div id="container" style="height:100%;">
+        <div class="pageHeight" style="background:#8ebbb4">
+            <img class="lazy2" data-original="./image/2.jpg" alt="" height="200">
+        </div>
+        <div class="pageHeight" style="background:#ea969f">
+            <img class="lazy1" data-original="./image/1.jpg" alt="" height="200">
+        </div>
+        <div class="pageHeight" style="background:#ee9351">
+            <img class="lazy2" data-original="./image/2.jpg" alt="" height="200">
+        </div>
+        <div class="pageHeight" style="background:#adb159">
+            <img class="lazy1" data-original="./image/1.jpg" alt="" height="200">
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $("img.lazy1").lazyload({
+                // container: $("#container"),
+                effect: "fadeIn",
+                threshold: 20,
+            });
+            $("img.lazy2").lazyload({
+                // container: $("#container"),
+                effect: "fadeIn",
+                threshold: 20,
+            });
+        })//插件也可以使用在滚动容器内的图片上。下面的div拥有scrollerbar，内容的内容进行滚动，滚到图片位置时，图片开始加载
+        var height = window.document.body.clientHeight;
+        var bagColor = ["#8ebbb4", "#ea969f", "#ee9351", "#adb159"]
+        var domPage = document.getElementsByClassName("pageHeight");
+        [].forEach.call(domPage, function (element, index) {
+            element.style = "height:" + height + "px;" + "background:" + bagColor[index];
+        });
+
+    </script>
+    <!-- <img class="lazy1" data-original="./image/1.jpg" style="margin-top:1000px;width:200px;" height="200"> -->
+    <!-- <script>
+        $(function () {
+            $("img.lazy1").lazyload({
+                // threshold :20 //lazyload默认是当滚动到该图片位置时，加载该图片。但是可以通过设置Threshold参数来实现滚到距离其xx px时就加载。设置了滚动到距离图片20px时，图片就开始再开始加载
+                // event : "click"//当触发定义的事件时，图片才开始加载,使图片点击后，才开始加载
+                // event: "sporty"//Tip:你可以使用这个来实现图片的延迟加载
+                // 插件默认的加载效果是 show() ,你可以使用任何你想要的效果。下面的代码使用了 fadeIn()
+                effect: "fadeIn"
+            });
+        })
+        // $(window).bind("load", function () {
+        //     var timeout = setTimeout(function () {
+        //         $("img.lazy").trigger("sporty")
+        //     },3000);
+        // });//上面的代码在页面加载完毕后3秒才开始加载图片
+    </script> -->
+</body>
+
+</html>

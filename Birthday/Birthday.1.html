@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../Component/jquery/jquery-3.3.1.js"></script>
+    <script src="../Component/node_modules/jquery-lazyload/jquery.lazyload.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div style="height:1000px">
+            <img class="lazy1" data-original="./image/1.jpg" alt="" height="200">
+        </div>
+        <div style="height:1000px">
+            <img class="lazy2" data-original="./image/2.jpg" alt="" height="200">
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $("img.lazy1").lazyload({
+                // container: $("#container"),
+                effect: "fadeIn",
+                threshold: 20,
+            });
+            $("img.lazy2").lazyload({
+                // container: $("#container"),
+                effect: "fadeIn",
+                threshold: 20,
+            });
+        })
+        //使用ajax获取数据
+        //创建异步对象
+        var ajaxObj = new XMLHttpRequest();
+        //设置请求参数。包括请求的方法以及url
+        ajaxObj.open("get", "http://127.0.0.1:8434/api/InformationRegistModel/ModelConfig/GetModelConfigByModelId/334256284381220864/OperationControlCooperation/53305584107157536/53305584107157536/77f48f4d-500e-4edf-ae3c-44f943bb2c2d");
+        //发送请求
+        ajaxObj.send();
+        //注册事件
+        ajaxObj.onreadystatechange = function () {
+            if (ajaxObj.readyState == 4 && ajaxObj.status == 200) {
+                // 5.在注册的事件中 获取 返回的 内容 并修改页面的显示
+                console.log("数据返回成功" + ajaxObj.responseText);
+            }
+        }
+
+
+    </script>
+    <!--  -->
+</body>
+
+</html>

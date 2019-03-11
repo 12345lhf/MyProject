@@ -1,0 +1,108 @@
+.index-panel {
+  padding-top: 6%;
+  width: 100%;
+  margin: 0  auto;
+  padding-bottom: 10px;
+}
+.index-panel .login-frame {
+  width: 380px;
+  height: 440px;
+  background: #fff;
+  padding: 20px 30px 15px;
+  margin: 0 auto;
+}
+.index-panel .login-frame .login-title {
+  text-align: center;
+  height: 70px;
+  font-size: 24px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.index-panel .login-frame .form-group {
+  width: 320px;
+  height: 40px;
+  margin-bottom: 22px;
+  position: relative;
+}
+.index-panel .login-frame .form-group > input {
+  height: 40px;
+  padding: 8px 0;
+  padding-left: 36px;
+  width: 100%;
+}
+.index-panel .login-frame .form-group .inp-front {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.index-panel .login-frame .form-group .clear-content {
+  position: absolute;
+  top: 9px;
+  right: 5px;
+}
+.index-panel .login-frame .form-group .clear-content .tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+  border-radius: 4px;
+}
+.index-panel .login-frame .form-group .bottom-tip {
+  color: #ee4b47;
+  position: absolute;
+  top: auto;
+  font-size: 12px;
+  line-height: 18px;
+}
+.index-panel .login-frame .form-group .bottom-tip .bottom-txt-right {
+  padding-left: 4px;
+}
+.index-panel .login-frame .login-btn {
+  width: 320px;
+  height: 40px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #fff;
+}
+.index-panel .login-frame .login-btn > button {
+  height: 40px;
+}
+.index-panel .login-frame .login-tip {
+  display: flex;
+  justify-content: space-between;
+  height: 34px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.index-panel .login-frame .login-tip .tip-left {
+  font-weight: normal;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.index-panel .login-frame .login-tip .tip-left > input {
+  margin-right: 5px;
+  vertical-align: text-bottom;
+}
+.index-panel .login-frame .login-tip .tip-right {
+  color: #279bf1;
+}
+.index-panel .login-frame .login-tip .tip-right > a {
+  text-decoration: none;
+}
+.index-panel .login-frame .login-tip .login-line {
+  margin: 0 7px;
+  height: 12px;
+  width: 1px;
+  background: #ccc;
+  overflow: hidden;
+  display: inline-block;
+}
+.index-panel .login-frame .alert-danger {
+  background: #ffd0d0;
+  color: #ce4040;
+  padding: 7px 17px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
